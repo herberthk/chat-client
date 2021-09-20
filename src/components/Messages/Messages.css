@@ -1,0 +1,14 @@
+@import "../../App.css";
+
+.messages {
+  height: 300px;
+  padding: 5% 0;
+  overflow: auto;
+  flex: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  .messages {
+    height: 70vh;
+  }
+}

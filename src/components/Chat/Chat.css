@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import "../../App.css";
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+.chat-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0,0,0, 0.2);
+  /* height: 70vh; */
+}
+
+.list-wrapper {
+  padding: 10px;
+  background-color: #fff;
+  color: rgb(29, 29, 29);
+}
+.list-wrapper h2{
+  text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.list-user {
+  padding: 12px;
+  text-transform: capitalize;
+  border-radius: 40px;
+  box-shadow: 0 0 40px rgb(0 0 0 / 10%);
+  text-align: center;
+}
+
+/* .list-user:hover {
+  background-color: rgb(216, 216, 216);
+  cursor: pointer;
+} */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .outerContainer {
+    height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .chat-wrapper {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .list-wrapper {
+    display: none;
+  }
+}
