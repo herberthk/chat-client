@@ -18,13 +18,13 @@ const Chat = ({ location }) => {
   let [users, setUsers] = useState([]);
 
   // const ENDPOINT = "https://chatroooms.herokuapp.com/";
-  const ENDPOINT = window.location.hostname === 'localhost' ? "http://localhost:5000": '';
+  const ENDPOINT = window.location.hostname === 'localhost' ? "http://localhost:5000": 'https://live-chat-herbert.herokuapp.com';
   // console.log('host');
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT,{transports: ['websocket'],upgrade:false});
 
     setName(name);
     setRoom(room);
