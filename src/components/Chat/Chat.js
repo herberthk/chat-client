@@ -18,7 +18,7 @@ const Chat = ({ location }) => {
   let [users, setUsers] = useState([]);
 
   // const ENDPOINT = "https://chatroooms.herokuapp.com/";
-  const ENDPOINT = window.location.hostname === 'localhost' ? "http://localhost:5000": 'https://live-chat-herbert.herokuapp.com';
+  const ENDPOINT = window.location.hostname === 'localhost' ? "http://localhost:5000": 'https://live-chat-server-prh6.onrender.com';
   // console.log('host');
 
   useEffect(() => {
